@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'abel-regular';
+  src: url('/fonts/Abel-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('/fonts/Inter-VariableFont_opsz\,wght.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content {
+  margin-top: 80px;
+}

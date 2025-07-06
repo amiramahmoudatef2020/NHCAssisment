@@ -1,0 +1,29 @@
+.page-footer {
+	min-height: 129px;
+	background-color: #292759;
+	display: flex;
+	padding: 0 120px;
+
+	.footer-container {
+		/* height: 50%; */
+		color: white;
+		width: 100%;
+		border-top: 1px solid #f1f1f154;
+		padding: 20px 0;
+
+		.logo {
+			margin-right: 32px;
+		}
+
+		.footer-copyright {
+			font-family: 'abel-regular';
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.page-footer {
+		padding: 0 10%;
+	}
+}
