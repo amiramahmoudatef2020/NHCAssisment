@@ -4,16 +4,15 @@ import { notFound } from 'next/navigation';
 import { getSafeParams } from '../../utils/params';
 
 type PageProps = {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 };
 
 export default async function Page({ params }: PageProps) {
   let id: string;
 
   try {
-    const safeParams = await getSafeParams({ params }, ['id']);
+    const resolvedParams = await params; // await the promise
+    const safeParams = await getSafeParams({ params: resolvedParams }, ['id']);
     id = safeParams.id;
   } catch {
     return notFound();
